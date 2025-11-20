@@ -1,6 +1,23 @@
-<header class="absolute top-0 left-0 w-full text-primary-950 py-4 px-6">
-  <ul class="flex gap-4">
-    <li><a href="/">Home</a></li>
-    <li><a href="/about-us">About Us</a></li>
-  </ul>
+---
+import { HugeiconsIcon } from '@hugeicons/react'
+import { CallIncoming04Icon } from '@hugeicons-pro/core-duotone-rounded'
+---
+
+<header class="absolute top-0 left-0 w-full flex flex-col items-center">
+  <div class="w-full max-w-8xl h-24 flex items-center justify-between">
+    <a href="/"><img src="/images/logo.svg" alt="Inszone Insurance Services" width="124" height="56"></a>
+    <ul class="flex font-semibold leading-none">
+      <li><a class="flex py-4 px-5 rounded hover:text-primary-950 text-primary-950 bg-primary-100" href="/">Insurance</a></li>
+      <li><a class="flex py-4 px-5 rounded hover:text-primary-950" href="/about-us">Find Location</a></li>
+      <li><a class="flex py-4 px-5 rounded hover:text-primary-950" href="/about-us">Resources</a></li>
+      <li><a class="flex py-4 px-5 rounded hover:text-primary-950" href="/about-us">About Us</a></li>
+    </ul>
+    <div class="flex items-center gap-1 text-primary-950">
+      <HugeiconsIcon icon={ CallIncoming04Icon } strokeWidth={ 1 } size={ 48 } />
+      <div class="flex flex-col gap-1">
+        <div class="leading-none font-semibold">Call Us Now!</div>
+        <div class="font-bold text-2xl leading-none">(877) 852-6408</div>
+      </div>
+    </div>
+  </div>
 </header>
