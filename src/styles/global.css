@@ -100,9 +100,7 @@
 :root {
   font-family: "Inter", sans-serif;
   color: var(--color-neutral-600);
-  --foreground: #020618;
-  --background: #ffffff;
-  --surface: #141429;
+  --transition-inszone: all cubic-bezier(0.32,0.72,0,1);
 }
 
 @theme {
@@ -130,4 +128,54 @@
   --color-neutral-900: #101828;
   --color-neutral-950: #020618;
   --container-8xl: 1320px;
+}
+
+@layer {
+  .transition-inszone {
+    transition: var(--transition-inszone) 0.8s;
+  }
+  .shadow-inszone {
+    box-shadow: 0 12px 56px rgba(0,46,78,0.08);
+  }
+  .gradient-inszone {
+    background: linear-gradient(45deg, var(--color-primary-600) 0%, var(--color-primary-450) 100%);
+  }
+  .gradient-inszone-dark {
+    background: linear-gradient(45deg, var(--color-primary-950) 0%, var(--color-primary-800) 100%);
+  }
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translate3d(-120px, 0, 0);
+  transition: var(--transition-inszone) 1.2s;
+  visibility: hidden;
+}
+
+.reveal-left__visible {
+  visibility: visible;
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.reveal-up {
+  opacity: 0;
+  transform: translate3d(0, 120px, 0);
+  transition: var(--transition-inszone) 1.2s;
+  visibility: hidden;
+}
+
+.reveal-up__visible {
+  visibility: visible;
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.reveal-fade {
+  opacity: 0;
+  transition: var(--transition-inszone) 1.2s;
+}
+
+.reveal-fade__visible {
+  opacity: 1;
 }

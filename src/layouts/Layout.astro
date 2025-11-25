@@ -13,9 +13,9 @@ const { title, description, image } = Astro.props
 <!doctype html>
 <html lang="en">
   <Head title={ title } description={ description } image={ image } />
-  <body>
+  <body data-scroll-container>
     <Header/>
-    <main>
+    <main data-scroll-section>
       <slot />
     </main>
   </body>
@@ -23,6 +23,7 @@ const { title, description, image } = Astro.props
 
 <script>
   import LocomotiveScroll from 'locomotive-scroll'
+  import { RevealFade, RevealLeft, RevealUp } from '@/scripts/reveal'
 
   interface ScrollInstance {
     destroy: () => void
@@ -36,6 +37,13 @@ const { title, description, image } = Astro.props
     }
 
     window.scrollTo(0, 0)
+
+    const revealUp = new RevealUp()
+    revealUp.observe()
+    const revealLeft = new RevealLeft()
+    revealLeft.observe()
+    const revealFade = new RevealFade()
+    revealFade.observe()
 
     locomotiveScroll = new LocomotiveScroll({
       smooth: true,
