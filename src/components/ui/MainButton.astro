@@ -7,6 +7,7 @@ export interface Props {
   variant?: 'default' | 'main' | 'ghost' | 'soft'
   icon?: IconSvgElement
   iconPosition?: 'left' | 'right'
+  iconStroke?: number
   class?: string
   [key: string]: any
 }
@@ -16,6 +17,7 @@ const {
   variant = 'default', 
   icon, 
   iconPosition = 'right',
+  iconStroke = 1,
   class: className = '',
   ...props 
 } = Astro.props
@@ -51,7 +53,7 @@ const iconSizes = {
 >
   {icon && iconPosition === 'left' && (
     <div class="group-hover:-ml-1 group-hover:mr-1 transition-all duration-300 ease-in-out">
-      <HugeiconsIcon icon={icon} size={iconSizes[size]} strokeWidth={2} />
+      <HugeiconsIcon icon={icon} size={iconSizes[size]} strokeWidth={iconStroke} />
     </div>
   )}
   
@@ -59,7 +61,7 @@ const iconSizes = {
   
   {icon && iconPosition === 'right' && (
     <div class="group-hover:ml-1 group-hover:-mr-1 transition-all duration-300 ease-in-out">
-      <HugeiconsIcon icon={icon} size={iconSizes[size]} strokeWidth={2} />
+      <HugeiconsIcon icon={icon} size={iconSizes[size]} strokeWidth={iconStroke} />
     </div>
   )}
 </button>

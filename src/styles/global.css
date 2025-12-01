@@ -138,7 +138,7 @@
     box-shadow: 0 12px 56px rgba(0,46,78,0.08);
   }
   .gradient-inszone {
-    background: linear-gradient(45deg, var(--color-primary-600) 0%, var(--color-primary-450) 100%);
+    background: linear-gradient(45deg, var(--color-primary-600) 0%, var(--color-primary-400) 100%);
   }
   .gradient-inszone-dark {
     background: linear-gradient(45deg, var(--color-primary-950) 0%, var(--color-primary-800) 100%);

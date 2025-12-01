@@ -1,6 +1,6 @@
 ---
 import MainButton from '@/components/ui/MainButton.astro'
-import { ArrowRight02Icon, Briefcase01Icon, Car01Icon, HealtcareIcon, Tick02Icon } from '@hugeicons-pro/core-stroke-rounded'
+import { ArrowRight02Icon, Briefcase01Icon, Car01Icon, HealtcareIcon, Tick02Icon } from '@hugeicons/core-free-icons'
 import { HugeiconsIcon } from '@hugeicons/react'
 import type { IconSvgElement } from '@hugeicons/react'
 
@@ -42,7 +42,7 @@ const insurances: ServiceProps[] = [
         </div>
         <div class="flex">
           <input type="text" placeholder="Enter Zip Code" class="placeholder-white px-6 h-16 flex-1 border-2 border-r-0 border-primary rounded-tl-lg rounded-bl-lg">
-          <MainButton icon={ ArrowRight02Icon } size="lg" variant="main" class="rounded-tl-none rounded-bl-none">
+          <MainButton icon={ ArrowRight02Icon } iconStroke={ 2 } size="lg" variant="main" class="rounded-tl-none rounded-bl-none">
             Start My Quote
           </MainButton>
         </div>

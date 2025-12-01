@@ -1,8 +1,9 @@
 ---
 const { pathname } = Astro.url
 import { HugeiconsIcon } from '@hugeicons/react'
-import { CallIncoming04Icon } from '@hugeicons-pro/core-duotone-rounded'
+import { CallIncoming04Icon, ArrowRight02Icon } from '@hugeicons/core-free-icons'
 import type { Nav } from '@/types'
+import MainButton from '@/components/ui/MainButton.astro'
 
 const normalizedPathName =
 	pathname.length > 1 && pathname.endsWith("/") ? pathname.slice(0, -1) : pathname
@@ -35,11 +36,13 @@ const nav: Nav[] = [
         ))
       }
     </nav>
-    <div class="flex items-center gap-1 text-primary-950">
-      <HugeiconsIcon icon={CallIncoming04Icon} strokeWidth={1} size={48} />
-      <div class="flex flex-col gap-1">
-        <div class="leading-none font-semibold">Call Us Now!</div>
-        <div class="font-bold text-2xl leading-none">(877) 852-6408</div>
+    <div class="flex items-center gap-2">
+      <div class="flex items-center gap-1 text-primary-950">
+        <HugeiconsIcon icon={CallIncoming04Icon} strokeWidth={1} size={48} />
+        <div class="flex flex-col gap-1">
+          <div class="leading-none font-semibold">Call Us Now!</div>
+          <div class="font-bold text-2xl leading-none">(877) 852-6408</div>
+        </div>
       </div>
     </div>
   </div>
